@@ -1,0 +1,88 @@
+Question:1. Given three numbers X,Y &Z. Write a function that returns the median number without using array.
+
+Ans: <!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+
+	<Script>
+		function median(){
+			if ((x < y && y < z) || (z < y && y < x)) 
+				return y;
+			else if ((y < x && x < z) || (z < x && x < y)) 
+				return x;
+			else 
+				return z;
+		}
+
+		var x = 8, y = 6, z = 4;
+		console.log("Median is: " + median());
+	</script>
+
+</body>
+</html>
+
+Question:2. Write a program that prints the odd number from 1 to 100. But for multiples of three print “Fizz” instead of the number & for the multiples of five print “Buzz”. However for numbers which are multiple of both three and five print “FizzBuzz”.
+
+Ans: 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+
+	<Script>
+		var a = 1;
+		for (a = 1; a<=100; a+=2)
+		{
+			if (a%3==0 && a%5==0) {
+				console.log("FizzBuzz");
+			}
+			else if (a%3==0) {
+				console.log("Fizz");
+			}
+			else if (a%5==0) {
+				console.log("Buzz");
+			}
+			else 
+				console.log(a);
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+Question:3. Loop over a string of arbitrary length, and count the occurrence of each character in the string. Eg: Input: “hello how are you”. Output: h:2, e:2, o:3, l:2, w:1, r:1, y:1.
+
+Ans:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<Script>
+		var str = "hello how are you";
+		var chars = str.split("");
+		var char_count = {};
+
+		for(var i = 0; i < chars.length; i++)
+		{
+			if(char_count[chars[i]] == undefined)
+				char_count[chars[i]] = 0;
+			char_count[chars[i]]++;
+		}
+		for (var i in char_count){
+			console.log(i + '=' + char_count[i]);
+		}
+	</script>
+</body>
+</html>
+
